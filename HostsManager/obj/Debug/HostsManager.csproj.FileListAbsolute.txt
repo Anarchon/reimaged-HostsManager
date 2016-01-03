@@ -1,0 +1,9 @@
+F:\backup\hostsmanager-code-13-trunk\HostsManager\bin\Debug\HostsManager.exe
+F:\backup\hostsmanager-code-13-trunk\HostsManager\bin\Debug\HostsManager.pdb
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.csprojResolveAssemblyReference.cache
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.Properties.Resources.resources
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.csproj.GenerateResource.Cache
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.exe
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.pdb
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.Form1.resources
+F:\backup\hostsmanager-code-13-trunk\HostsManager\obj\Debug\HostsManager.HostsTrayApp.resources
