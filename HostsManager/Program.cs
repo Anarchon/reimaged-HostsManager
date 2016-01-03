@@ -171,19 +171,61 @@ namespace HostsManager
         {
             trayMenu.MenuItems.Clear();
             ///  trayMenu.MenuItems.Add(hostsPath);
-            trayMenu.MenuItems.Add("Guard", (o, e) =>
+            ///  
+            trayMenu.MenuItems.Add("Autostart", (o, e) =>
+            {
+
+
+                RegistryKey autostart = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",true);
+              var  test = (string)autostart.GetValue("Hosts-Manager","");
+
+
+
+
+
+                if (test == Application.ExecutablePath)
+                {
+                    autostart.DeleteValue("Hosts-Manager");
+                    trayMenu.MenuItems[0].Checked = false;
+          
+                }
+                else
+
+                {
+
+                    autostart.SetValue("Hosts-Manager", Application.ExecutablePath);
+     
+                    trayMenu.MenuItems[0].Checked = true;
+                }
+
+
+
+
+                autostart.Close();
+
+
+
+
+
+
+              
+
+
+            });
+
+        trayMenu.MenuItems.Add("Hosts Datei schützen", (o, e) =>
 
             {
 
-                if (trayMenu.MenuItems[0].Checked == true)
+                if (trayMenu.MenuItems[1].Checked == true)
                 {
-                    trayMenu.MenuItems[0].Checked = false;
+                    trayMenu.MenuItems[1].Checked = false;
                     hostswatcher.EnableRaisingEvents=false;
 
                 }
 else
                 {
-                    trayMenu.MenuItems[0].Checked = true;
+                    trayMenu.MenuItems[1].Checked = true;
                     hostswatcher.EnableRaisingEvents = true;
 
 
